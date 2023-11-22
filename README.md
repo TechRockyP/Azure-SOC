@@ -27,9 +27,7 @@ For the "AFTER" metrics, Network Security Groups were hardened by blocking ALL t
 
 ## Attack Maps Before Hardening / Security Controls
 
-![image](https://github.com/TechRockyP/Azure-SOC/assets/151791347/dbbbfa5e-40ce-4ae5-9cab-3c38f595591b)
-
-![NSG Allowed Inbound Malicious Flows](![image]https://github.com/TechRockyP/Azure-SOC/assets/151791347/2c4992d3-ab32-4344-95a9-05c85d938994))<br>
+![NSG Allowed Inbound Malicious Flows]![image](https://github.com/TechRockyP/Azure-SOC/assets/151791347/dbbbfa5e-40ce-4ae5-9cab-3c38f595591b)
 ![Linux Syslog Auth Failures](https://i.imgur.com/G1YgZt6.png)<br>
 ![Windows RDP/SMB Auth Failures](https://i.imgur.com/ESr9Dlv.png)<br>
 
