@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this project, I build a mini honeynet in Azure and ingest log sources from various resources into a Log Analytics workspace, which is then used by Microsoft Sentinel to build attack maps, trigger alerts, and create incidents. I measured some security metrics in the insecure environment for 24 hours, apply some security controls to harden the environment, measure metrics for another 24 hours, then show the results below. The metrics we will show are:
+For this project, I created a small Azure honeynet and used log sources from several sources to fill a workspace for Log Analytics. Microsoft Sentinel then uses this workspace to produce incidents, generate alerts, and develop attack maps. After a day of measuring security metrics in the unsecure environment, I applied security measures to harden the environment and monitored security metrics again for a further day. The outcomes are displayed below.
 
 - SecurityEvent (Windows Event Logs)
 - Syslog (Linux Event Logs)
@@ -11,7 +11,7 @@ In this project, I build a mini honeynet in Azure and ingest log sources from va
 - AzureNetworkAnalytics_CL (Malicious Flows allowed into our honeynet)
 
 
-The architecture of the mini honeynet in Azure consists of the following components:
+The architecture of the mini honeynet in Azure are made up of the following components:
 
 - Virtual Network (VNet)
 - Network Security Group (NSG)
@@ -21,9 +21,9 @@ The architecture of the mini honeynet in Azure consists of the following compone
 - Azure Storage Account
 - Microsoft Sentinel
 
-For the "BEFORE" metrics, all resources were originally deployed, exposed to the internet. The Virtual Machines had both their Network Security Groups and built-in firewalls wide open, and all other resources are deployed with public endpoints visible to the Internet; aka, no use for Private Endpoints.
+When the resources were first deployed, they were entirely online for the "BEFORE" metrics. There was no need for private endpoints because all other resources were deployed with public endpoints visible to the Internet and the Virtual Machines' built-in firewalls and Network Security Groups were both wide open.
 
-For the "AFTER" metrics, Network Security Groups were hardened by blocking ALL traffic with the exception of my admin workstation, and all other resources were protected by their built-in firewalls as well as Private Endpoint
+Network Security Groups were hardened for the "AFTER" metrics by preventing ALL traffic save from my workstation. All other resources were shielded by both private endpoints and the firewalls that were already installed.
 
 ## Attack Maps Before Hardening / Security Controls
 
@@ -68,6 +68,6 @@ Stop Time	2023-11-21 18:05:29
 
 ## Conclusion
 
-In this project, a mini honeynet was constructed in Microsoft Azure and log sources were integrated into a Log Analytics workspace. Microsoft Sentinel was employed to trigger alerts and create incidents based on the ingested logs. Additionally, metrics were measured in the insecure environment before security controls were applied, and then again after implementing security measures. It is noteworthy that the number of security events and incidents were drastically reduced after the security controls were applied, demonstrating their effectiveness.
+This project involved building a mini honeynet in Microsoft Azure and integrating log sources into a workspace for log analytics. Based on the ingested data, Microsoft Sentinel was used to generate incidents and alerts. Furthermore, measurements were taken in the compromised environment both before and after security measures were put in place. Notably, the implementation of security measures resulted in a significant decrease in the quantity of security events and incidents, indicating their effectiveness.
 
-It is worth noting that if the resources within the network were heavily utilized by regular users, it is likely that more security events and alerts may have been generated within the 24-hour period following the implementation of the security controls.
+Note that more security events and alerts might have been generated in the 24 hours after the security controls were put in place if regular users were heavily using the network's resources.
