@@ -27,23 +27,26 @@ For the "AFTER" metrics, Network Security Groups were hardened by blocking ALL t
 
 ## Attack Maps Before Hardening / Security Controls
 
-![NSG Allowed Inbound Malicious Flows]![image](https://github.com/TechRockyP/Azure-SOC/assets/151791347/dbbbfa5e-40ce-4ae5-9cab-3c38f595591b)
-![Linux Syslog Auth Failures](https://i.imgur.com/G1YgZt6.png)<br>
-![Windows RDP/SMB Auth Failures](https://i.imgur.com/ESr9Dlv.png)<br>
+[NSG Allowed Inbound Malicious Flows]![image](https://github.com/TechRockyP/Azure-SOC/assets/151791347/dbbbfa5e-40ce-4ae5-9cab-3c38f595591b)
+
+
+[Windows RDP/SMB Auth Failures]
+![image](https://github.com/TechRockyP/Azure-SOC/assets/151791347/f66dc6f4-ce39-409e-a0b7-65d565410dac)
+
 
 ## Metrics Before Hardening / Security Controls
 
 The following table shows the metrics we measured in our insecure environment for 24 hours:
-Start Time 2023-03-15 17:04:29
-Stop Time 2023-03-16 17:04:29
+Start Time 2023-11-15 17:56:04
+Stop Time 2023-11-16 17:56:04
 
 | Metric                   | Count
 | ------------------------ | -----
-| SecurityEvent            | 19470
-| Syslog                   | 3028
-| SecurityAlert            | 10
-| SecurityIncident         | 348
-| AzureNetworkAnalytics_CL | 843
+| SecurityEvent            | 19641
+| Syslog                   | 2957
+| SecurityAlert            | 3
+| SecurityIncident         | 98
+| AzureNetworkAnalytics_CL | 999
 
 ## Attack Maps Before Hardening / Security Controls
 
@@ -52,13 +55,13 @@ Stop Time 2023-03-16 17:04:29
 ## Metrics After Hardening / Security Controls
 
 The following table shows the metrics we measured in our environment for another 24 hours, but after we have applied security controls:
-Start Time 2023-03-18 15:37
-Stop Time	2023-03-19 15:37
+Start Time 2023-11-20 18:05:29
+Stop Time	2023-11-21 18:05:29
 
 | Metric                   | Count
 | ------------------------ | -----
-| SecurityEvent            | 8778
-| Syslog                   | 25
+| SecurityEvent            | 2391
+| Syslog                   | 135
 | SecurityAlert            | 0
 | SecurityIncident         | 0
 | AzureNetworkAnalytics_CL | 0
