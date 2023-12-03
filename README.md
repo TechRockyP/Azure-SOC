@@ -2,7 +2,7 @@
 
 ## Introduction
 
-For this project, I created a small Azure honeynet and used log sources from several sources to fill a workspace for Log Analytics. Microsoft Sentinel then uses this workspace to produce incidents, generate alerts, and develop attack maps. After a day of measuring security metrics in the unsecure environment, I applied security measures to harden the environment and monitored security metrics again for a further day. The outcomes are displayed below.
+For this project, I constructed a miniature honeynet within Azure, integrating log sources from various resources into a Log Analytics workspace. Microsoft Sentinel utilized this workspace to craft attack maps, trigger alerts, and document incidents. After assessing security metrics in the unsecured environment over a 24-hour period, I implemented targeted security controls to fortify the system. Following this, I conducted a second round of metric measurements over the next 24 hours, with the results outlined below.
 
 - SecurityEvent (Windows Event Logs)
 - Syslog (Linux Event Logs)
@@ -21,9 +21,9 @@ The architecture of the mini honeynet in Azure are made up of the following comp
 - Azure Storage Account
 - Microsoft Sentinel
 
-When the resources were first deployed, they were entirely online for the "BEFORE" metrics. There was no need for private endpoints because all other resources were deployed with public endpoints visible to the Internet and the Virtual Machines' built-in firewalls and Network Security Groups were both wide open.
+In the initial "BEFORE" metrics phase, all resources were initially deployed and made accessible on the internet. The Virtual Machines had both their Network Security Groups and built-in firewalls configured with unrestricted access, and all other resources were deployed with public endpoints that were openly visible to the Internet. As a result, there was no necessity for Private Endpoints during this phase.
 
-Network Security Groups were hardened for the "AFTER" metrics by preventing ALL traffic save from my workstation. All other resources were shielded by both private endpoints and the firewalls that were already installed.
+For the "AFTER" metrics, Network Security Groups were hardened by blocking ALL traffic with the exception of my own workstation, and all other resources were protected by their own built-in firewalls as well as Private Endpoint.
 
 ## Attack Maps Before Hardening / Security Controls
 
@@ -68,6 +68,6 @@ Stop Time	2023-11-21 18:05:29
 
 ## Conclusion
 
-This project involved building a mini honeynet in Microsoft Azure and integrating log sources into a workspace for log analytics. Based on the ingested data, Microsoft Sentinel was used to generate incidents and alerts. Furthermore, measurements were taken in the compromised environment both before and after security measures were put in place. Notably, the implementation of security measures resulted in a significant decrease in the quantity of security events and incidents, indicating their effectiveness.
+For this project, a compact honeynet was built within Microsoft Azure, incorporating log sources into a Log Analytics workspace. Microsoft Sentinel was used to initiate alerts and generate incidents by analyzing the ingested logs. Furthermore, security metrics were assessed in the unsecured environment both prior to the implementation of security controls and subsequently after their application. Notably, the implementation of security measures resulted in a significant decrease in the quantity of security events and incidents, showing it's effictiveness.
 
 Note that more security events and alerts might have been generated in the 24 hours after the security controls were put in place if regular users were heavily using the network's resources.
