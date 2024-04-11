@@ -1,4 +1,6 @@
 # Creating a SOC + Honeynet in Azure with Live Traffic
+![image](https://github.com/TechRockyP/Azure-SOC/assets/151791347/b887b73b-5f93-4717-b9d8-18bad47b80aa)
+
 
 ## Introduction
 
@@ -9,6 +11,14 @@ For this project, I constructed a miniature honeynet within Azure, integrating l
 - SecurityAlert (Log Analytics Alerts Triggered)
 - SecurityIncident (Incidents created by Sentinel)
 - AzureNetworkAnalytics_CL (Malicious Flows allowed into our honeynet)
+
+## Architecure Before Hardening
+
+![image](https://github.com/TechRockyP/Azure-SOC/assets/151791347/7367d69d-0400-4138-9a19-55aa7447eab2)
+
+## Architecure After Hardening
+
+![image](https://github.com/TechRockyP/Azure-SOC/assets/151791347/0081c9cd-29ed-4c07-90fc-1cb0f9c711b2)
 
 
 The architecture of the mini honeynet in Azure are made up of the following components:
